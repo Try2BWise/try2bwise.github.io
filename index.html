@@ -106,15 +106,34 @@
             header { padding: 40px 20px 80px 20px; }
             h1 { font-size: 1.75rem; }
         }
+
+        .logo-container {
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            background: white; /* Adds the white background since the PNG isn't transparent */
+            padding: 30px;
+            border-radius: 16px; /* Matches the cards below */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow for the "Hero" feel */
+            display: inline-block; /* Wraps tightly around the logo width */
+        }
+
+        .logo-main {
+            width: 100%;
+            max-width: 450px; 
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
 
-    <header>
+<header>
         <div class="logo-container">
             <img src="logo-full.png" alt="Gorilla Grin Logo" class="logo-main">
         </div>
-        <p class="tagline">A place for fun ideas, interactive tools, and independent games.</p>
+        <h1 style="color: white; margin-top: 20px;">Gorilla Grin</h1>
+        <p class="tagline">Where big ideas come to play.</p>
     </header>
 
     <div class="container">
