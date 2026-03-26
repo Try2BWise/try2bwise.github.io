@@ -12,7 +12,6 @@
             --primary-dark: #1C1F1E;
             --brand-green: #2F5D50;
             --off-white: #F9FBF9;
-            --accent-gold: #FFD700; /* Pulled from the "Grin" in your logo */
         }
 
         * { box-sizing: border-box; }
@@ -29,109 +28,125 @@
         header {
             background-color: var(--brand-green);
             color: white;
-            padding: 80px 20px;
+            padding: 60px 20px 100px 20px;
             text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+            /* Creates a slight organic curve at the bottom */
+            border-bottom-left-radius: 50% 20px;
+            border-bottom-right-radius: 50% 20px;
+        }
+
+        .logo-container {
+            max-width: 600px;
+            margin: 0 auto 20px auto;
         }
 
         .logo-main {
-            max-width: 300px;
-            margin-bottom: 20px;
-            /* Ensure the logo is never distorted */
+            width: 100%;
+            max-width: 400px; /* Scales your 600px image for better mobile viewing */
             height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
-        h1 { font-weight: 700; font-size: 2.5rem; margin: 0; }
-        .tagline { font-weight: 600; opacity: 0.9; font-size: 1.2rem; }
+        h1 { font-weight: 700; font-size: 2.2rem; margin: 10px 0; letter-spacing: -0.5px; }
+        .tagline { font-weight: 600; opacity: 0.9; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
 
         /* Content Sections */
         .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 60px 20px;
+            max-width: 1100px;
+            margin: -40px auto 0 auto; /* Pulls cards up into the header area slightly */
+            padding: 0 20px 60px 20px;
         }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            gap: 25px;
         }
 
         .card {
             background: white;
             padding: 40px;
-            border-radius: 12px;
-            border-bottom: 5px solid var(--brand-green);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(28, 31, 30, 0.08);
+            transition: transform 0.25s ease;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .card:hover { transform: translateY(-5px); }
+        .card:hover { transform: translateY(-8px); }
+
+        .card h3 { font-size: 1.5rem; color: var(--brand-green); margin-top: 0; }
 
         .btn {
             display: inline-block;
             background-color: var(--brand-green);
             color: white;
-            padding: 12px 28px;
+            padding: 14px 32px;
             text-decoration: none;
-            border-radius: 30px;
+            border-radius: 8px;
             font-weight: 700;
             margin-top: 20px;
-            transition: background 0.2s;
+            transition: opacity 0.2s;
         }
 
-        .btn:hover { background-color: var(--primary-dark); }
+        .btn:hover { opacity: 0.9; }
 
         footer {
             text-align: center;
-            padding: 40px;
-            font-size: 0.9rem;
-            opacity: 0.7;
+            padding: 60px 20px;
+            font-size: 0.85rem;
+            color: #666;
+            font-weight: 600;
         }
 
         @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
+            header { padding: 40px 20px 80px 20px; }
+            h1 { font-size: 1.75rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="logo-full.png" alt="Gorilla Grin Logo" class="logo-main">
-        <p class="tagline">More Than Just Games. Big Ideas for Big Fun.</p>
+        <div class="logo-container">
+            <img src="logo-full.png" alt="Gorilla Grin Logo" class="logo-main">
+        </div>
+        <p class="tagline">A place for fun ideas, interactive tools, and independent games.</p>
     </header>
 
     <div class="container">
-        <section id="about">
-            <h2 style="text-align: center;">Welcome to the Jungle of Ideas</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto;">
-                At <strong>Gorilla Grin</strong>, we believe the best ideas start with a smile. From self-contained PWAs to creative tools and interactive experiences, we are building a home for concepts that are simple, smart, and satisfying.
-            </p>
-        </section>
-
         <div class="grid">
             <div class="card">
-                <h3>🕹️ Play</h3>
-                <p>Track your specialty plates with our offline-ready PWA tracker.</p>
-                <a href="/florida-plates-game/" class="btn">Florida Plates Game</a>
+                <div>
+                    <h3>🚗 Play</h3>
+                    <p>The ultimate Florida Specialty Plate tracker. Designed for the road, built to work offline.</p>
+                </div>
+                <a href="/florida-plates-game/" class="btn">Launch Game</a>
             </div>
 
             <div class="card">
-                <h3>💡 Imagine</h3>
-                <p>We're currently cooking up new ways to play, organize, and create. Stay tuned.</p>
+                <div>
+                    <h3>💡 Imagine</h3>
+                    <p>We're exploring new ways to make everyday tasks more engaging. Fun ideas currently in development.</p>
+                </div>
+                <span style="color: #999; font-weight: 700; margin-top: 20px;">Coming Soon</span>
             </div>
 
             <div class="card">
-                <h3>🤝 Connect</h3>
-                <p>Have a "Gorilla-sized" idea? We'd love to hear what makes you grin.</p>
+                <div>
+                    <h3>🍌 More</h3>
+                    <p>Beyond the screen. Gorilla Grin is about the joy of a good idea, no matter the medium.</p>
+                </div>
+                <span style="color: #999; font-weight: 700; margin-top: 20px;">Evolution in Progress</span>
             </div>
         </div>
     </div>
 
     <footer>
-        &copy; 2024 Gorilla Grin. Built for the web, designed for fun.
+        &copy; 2024 GORILLA GRIN. MAINTAIN SPACING. AVOID DISTORTION.
     </footer>
 
 </body>
