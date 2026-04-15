@@ -4,14 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Every PL8 Privacy Policy</title>
-  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <style>
+    :root {
+      --bg:#f5f1e8; --surface:#fffdf8; --ink:#10161c; --muted:#5c655f; --line:#dcd5c8;
+      --brand:#5f7f45; --brand-dark:#486334; --header:#0f161c; --white:#fff; --max:960px;
+      --radius:22px; --shadow:0 12px 32px rgba(16,22,28,.08);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+    a{color:var(--brand-dark)}
+    .container{width:min(calc(100% - 32px),var(--max));margin:0 auto}
+    .site-header{background:var(--header);color:var(--white);border-bottom:1px solid rgba(255,255,255,.08)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;min-height:80px}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-weight:900;text-transform:uppercase}
+    .hero{padding:32px 0}
+    .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero-card{padding:28px}
+    h1{margin:0;font-size:clamp(2.2rem,5vw,3.5rem);text-transform:uppercase;letter-spacing:-.04em}
+    .effective{margin-top:10px;color:var(--muted);font-weight:700}
+    .policy-card{margin-top:20px;overflow:hidden}
+    .section{padding:24px;border-top:1px solid var(--line)}
+    .section:first-child{border-top:0}
+    h2{margin:0 0 10px;font-size:1.35rem;letter-spacing:-.02em}
+    p{margin:0 0 14px}
+    ul{margin:0 0 14px 18px}
+    li{margin-bottom:8px}
+    strong{color:var(--ink)}
+    .notice{background:#eef3e4;border:1px solid #d7e2ca;border-radius:16px;padding:16px;margin-top:12px}
+    .footer{padding:32px 0;text-align:center;color:var(--muted);font-size:.95rem}
+    @media(max-width:760px){.hero-card,.section{padding:20px}}
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Back to Gorilla Grin home">
         <div class="brand-mark">
-          <img src="gorilla-grin-horizontal-dark-with-wordmark.png" alt="Gorilla Grin logo" style="width:100%;height:100%;object-fit:cover;object-position:left;" />
+          <img src="/mnt/data/gorilla-grin-horizontal-dark-with-wordmark.png" alt="Gorilla Grin logo" style="width:100%;height:100%;object-fit:cover;object-position:left;" />
         </div>
         <div class="brand-text">Gorilla <span>Grin</span></div>
       </a>
